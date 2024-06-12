@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "744551342723",
+    "firebase_url": "https://ponto-simples-default-rtdb.firebaseio.com",
+    "project_id": "ponto-simples",
+    "storage_bucket": "ponto-simples.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744551342723:android:903191db189b76925fb1b6",
+        "android_client_info": {
+          "package_name": "com.example"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7XUhbr7hJlFhEqfrlF0qGOZBFsPlIcrw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744551342723:android:3200220c7e64589d5fb1b6",
+        "android_client_info": {
+          "package_name": "com.example.projetointegrador"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7XUhbr7hJlFhEqfrlF0qGOZBFsPlIcrw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744551342723:android:bd413d99776706475fb1b6",
+        "android_client_info": {
+          "package_name": "com.example.projetointegrador3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7XUhbr7hJlFhEqfrlF0qGOZBFsPlIcrw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
