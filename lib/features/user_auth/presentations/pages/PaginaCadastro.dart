@@ -28,6 +28,7 @@ class _PaginaCadastro extends State<PaginaCadastro>{
     super.dispose();
   }
 
+  //Coleta os dados do usuário
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -126,10 +127,12 @@ class _PaginaCadastro extends State<PaginaCadastro>{
     );
   }
 
+  //Valída os dados do cadastro
   void _cadastrar() async{
     String email = _emailController.text;
     String senha = _senhaController.text;
 
+    //Função que faz o cadastro da classe "firebase_auth_services"
     User? user = await _auth.cadastroEmailESenha(email, senha);
 
     if( user != null){ //valida o usuário
@@ -139,7 +142,34 @@ class _PaginaCadastro extends State<PaginaCadastro>{
       );
 
     }else{
-      print("Ocorreu um erro");
+      //Caso cadastro inválido, notifíca o usuário
+      showAlertDialog(context);
     }
+  }
+
+  void showAlertDialog(BuildContext context) {
+    Widget okButton = TextButton(
+      child: Text("Voltar"),
+      onPressed: () {
+        Navigator.of(context).pop();
+      },
+    );
+
+    // Corpo do alerta
+    AlertDialog alert = AlertDialog(
+      title: Text("Dados inválidos.", style: TextStyle(color: Colors.red)),
+      content: Text(""),
+      actions: [
+        okButton,
+      ],
+    );
+
+    // Exibe o diálogo
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      },
+    );
   }
 }

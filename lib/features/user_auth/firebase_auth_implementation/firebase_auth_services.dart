@@ -1,7 +1,6 @@
-//import 'package:firebase_auth/firebase_auth.dart';
-
 import 'package:firebase_auth/firebase_auth.dart';
 
+//Classe com todos os métodos que é preciso para a autenticação de usuário
 class FirebaseAuthServices{
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
