@@ -1,9 +1,11 @@
+import 'package:cloud_functions/cloud_functions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 //Classe com todos os métodos que é preciso para a autenticação de usuário
 class FirebaseAuthServices{
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseFunctions _functions = FirebaseFunctions.instance;
 
   //função de cadastro do usuário
   Future<User?> cadastroEmailESenha(String email, String senha) async{

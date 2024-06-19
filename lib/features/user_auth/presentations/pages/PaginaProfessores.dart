@@ -1,6 +1,7 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'package:flutter/material.dart';
+import '../../firebase_auth_implementation/firebase_auth_services.dart';
 import 'PaginaAulas.dart';
 
 class PaginaProfessores extends StatefulWidget {
@@ -11,11 +12,14 @@ class PaginaProfessores extends StatefulWidget {
 
 class _PaginaProfessores extends State<PaginaProfessores> {
 
+  final FirebaseAuthServices _auth = FirebaseAuthServices();
+
   //Path dos dados do banco (query é usada apenas para consulta)
   Query dbRef = FirebaseDatabase.instance.ref();
 
   //Corpo de como os dados do bd serão mostrado
   Widget listItem({required Map professores}) {
+
     //Estrutura onde vai ser mostrado os dados do usuário
     return Container(
       margin: const EdgeInsets.all(10),
@@ -28,7 +32,7 @@ class _PaginaProfessores extends State<PaginaProfessores> {
         children: [
 
           Text(
-            professores["key"],
+            professores['key'],
             style: TextStyle(fontSize: 19, fontWeight: FontWeight.w400),
           ),
           ElevatedButton(
