@@ -105,11 +105,6 @@ class _PaginaLogin extends State<PaginaLogin>{
                   ),
                 ),
                 const SizedBox(height: 20),
-                Image.asset(
-                  'assets/puc.png', // Caminho para a imagem
-                  width: 310,
-                  height: 200,
-                ),
               ],
             ),
           ),
@@ -129,7 +124,7 @@ class _PaginaLogin extends State<PaginaLogin>{
     if( user != null){
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => PaginaProfessores()), // mudar PaginaCadastro() para a futura home
+        MaterialPageRoute(builder: (context) => PaginaProfessores()),
       );
 
     }else{
